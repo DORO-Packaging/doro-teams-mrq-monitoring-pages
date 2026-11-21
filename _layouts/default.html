@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'fr-FR' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/doro-symbole.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/doro.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Accueil {{ site.title }}">
+        <img class="brand-mark" src="{{ '/assets/img/doro-symbole-fond-fonce.svg' | relative_url }}" alt="" width="44" height="44">
+        <img class="brand-word" src="{{ '/assets/img/doro-packaging-blanc.svg' | relative_url }}" alt="DORO Packaging" width="200" height="23">
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Accueil</a>
+        <a href="{{ '/privacy.html' | relative_url }}"{% if page.url == '/privacy.html' %} aria-current="page"{% endif %}>Confidentialité</a>
+        <a href="{{ '/terms.html' | relative_url }}"{% if page.url == '/terms.html' %} aria-current="page"{% endif %}>Conditions</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="wrap">
+      {% if page.title != site.title %}<p class="eyebrow">{{ site.title }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <main class="wrap content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <img src="{{ '/assets/img/doro-symbole-fond-fonce.svg' | relative_url }}" alt="" width="32" height="32">
+      <p>DORO · Application interne {{ site.title }}</p>
+      <nav aria-label="Pages légales">
+        <a href="{{ '/privacy.html' | relative_url }}">Confidentialité</a>
+        <a href="{{ '/terms.html' | relative_url }}">Conditions d’utilisation</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
