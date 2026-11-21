@@ -6,12 +6,15 @@
 - `privacy.md`
 - `terms.md`
 - `_config.yml`
+- `_layouts/default.html` (gabarit aux couleurs de la charte graphique DORO)
+- `assets/css/doro.css` (couleurs et typographies de la charte)
+- `assets/img/` (logos DORO issus de la charte)
 
 ## Procédure
 
 1. Créer un dépôt GitHub nommé `doro-teams-mrq-monitoring-pages` dans l’organisation GitHub DORO.
 2. Utiliser un dépôt **public** si l’organisation utilise GitHub Free. GitHub Pages est disponible pour les dépôts privés avec les offres GitHub Pro, Team ou Enterprise Cloud.
-3. Ajouter les quatre fichiers à la racine de la branche `main`.
+3. Ajouter ces fichiers et dossiers, en conservant l’arborescence, à la racine de la branche `main`.
 4. Ouvrir **Settings** > **Pages**.
 5. Dans **Build and deployment**, choisir **Deploy from a branch**.
 6. Sélectionner la branche `main` et le dossier `/ (root)`, puis enregistrer.
