@@ -1,48 +1,22 @@
-# Publication GitHub Pages
+# doro-teams-mrq-monitoring-pages
 
-## Fichiers à publier
+## Pourquoi ce dépôt existe
 
-- `index.md`
-- `privacy.md`
-- `terms.md`
-- `_config.yml`
-- `_layouts/default.html` (gabarit aux couleurs de la charte graphique DORO)
-- `assets/css/doro.css` (couleurs et typographies de la charte)
-- `assets/img/` (logos DORO issus de la charte)
+DORO a développé une application Microsoft Teams interne, **DORO Teams MRQ Monitoring**. Elle aide à faire respecter une règle simple dans les équipes `MRQ-*` : les documents sont déposés dans l’onglet **Fichiers / Documents** du canal, puis partagés sous forme de lien dans les publications, au lieu d’être joints directement aux messages.
 
-## Procédure
+Pour être installée dans Teams, une application doit déclarer dans son manifeste trois adresses web publiques :
 
-1. Créer un dépôt GitHub nommé `doro-teams-mrq-monitoring-pages` dans l’organisation GitHub DORO.
-2. Utiliser un dépôt **public** si l’organisation utilise GitHub Free. GitHub Pages est disponible pour les dépôts privés avec les offres GitHub Pro, Team ou Enterprise Cloud.
-3. Ajouter ces fichiers et dossiers, en conservant l’arborescence, à la racine de la branche `main`.
-4. Ouvrir **Settings** > **Pages**.
-5. Dans **Build and deployment**, choisir **Deploy from a branch**.
-6. Sélectionner la branche `main` et le dossier `/ (root)`, puis enregistrer.
-7. Attendre la fin du déploiement dans **Actions** ou **Settings** > **Pages**.
-8. Ouvrir l’URL affichée par GitHub Pages et contrôler les trois pages.
+- une page de présentation (`websiteUrl`) ;
+- une politique de confidentialité (`privacyUrl`) ;
+- des conditions d’utilisation (`termsOfUseUrl`).
 
-## URL attendue
+Microsoft exige que ces pages soient accessibles en HTTPS, sans authentification. Ce dépôt sert uniquement à les héberger, gratuitement et simplement, grâce à GitHub Pages.
 
-Si l’organisation GitHub est `<organisation>` et le dépôt `doro-teams-mrq-monitoring-pages` :
+## Ce qu’il contient
 
-- Accueil : `https://<organisation>.github.io/doro-teams-mrq-monitoring-pages/`
-- Confidentialité : `https://<organisation>.github.io/doro-teams-mrq-monitoring-pages/privacy.html`
-- Conditions : `https://<organisation>.github.io/doro-teams-mrq-monitoring-pages/terms.html`
+- `index.md` : présentation de l’application ;
+- `privacy.md` : politique de confidentialité ;
+- `terms.md` : conditions d’utilisation ;
+- `_config.yml`, `_layouts/`, `assets/` : mise en page aux couleurs de la charte graphique DORO.
 
-## Valeurs à reporter dans le manifeste Teams
-
-```json
-"developer": {
-  "name": "DORO",
-  "websiteUrl": "https://<organisation>.github.io/doro-teams-mrq-monitoring-pages/",
-  "privacyUrl": "https://<organisation>.github.io/doro-teams-mrq-monitoring-pages/privacy.html",
-  "termsOfUseUrl": "https://<organisation>.github.io/doro-teams-mrq-monitoring-pages/terms.html"
-}
-```
-
-## Contrôles avant publication Teams
-
-- Les trois URL répondent en HTTPS sans authentification.
-- Les pages ne contiennent aucun secret, identifiant technique sensible ou donnée personnelle.
-- Le texte a été validé par les responsables internes DORO appropriés.
-- Le manifeste Teams utilise les URL exactes publiées.
+Il ne contient ni le code de l’application, ni secret, ni donnée personnelle.

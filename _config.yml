@@ -1,3 +1,5 @@
 title: DORO Teams MRQ Monitoring
 description: Informations, confidentialité et conditions d’utilisation de l’application interne DORO Teams MRQ Monitoring.
 lang: fr-FR
+exclude:
+  - README.md
