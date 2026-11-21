@@ -6,6 +6,7 @@ title: DORO Teams MRQ Monitoring
 # DORO Teams MRQ Monitoring
 
 **Application interne DORO de supervision des publications Microsoft Teams dans les équipes MRQ.**
+{: .lead}
 
 ## Objet
 
